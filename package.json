@@ -1,0 +1,54 @@
+{
+  "name": "wishlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix src/**/*.{js, jsx}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloInsG/react-first-course.git"
+  },
+  "author": "Pablo Insua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloInsG/react-first-course/issues"
+  },
+  "homepage": "https://github.com/PabloInsG/react-first-course#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "husky": {
+      "hooks": {
+          "pre-commit": "lint-staged"
+      }
+  },
+  "lint-staged": {
+      "src/**/*.{js, jsx}": [
+          "npm run lint"
+      ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+        "browser": true 
+    },
+    "rules": {
+        "linebreak-style": "off"
+    }
+  }
+}
